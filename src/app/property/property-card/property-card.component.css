@@ -1,3 +1,47 @@
-.prop-Img{
+.card{
+  min-height: 400px;
+}
+.card-body h1 {
+  font-family: fantasy;
+  color: #0069d9;
+}
+.font-highlight {
+  font-style: italic;
+  color: red;
+}
+/* transition for zooming in */
+.card:hover img{
+  transform: scale(1.2, 1.2);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
   height: 250px;
+  opacity: 0.5;
+}
+/* transition for zooming out */
+.card img{
+  transform: scale(1, 1);
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  height: 250px;
+}
+.card-img-wrapper{
+  overflow: hidden;
+  position: relative;
+}
+
+.member-icon{
+position: absolute;
+bottom: -10%;
+left: 0;
+right: 0;
+margin-right: auto;
+margin-left: auto;
+opacity: 0;
+}
+.card-img-wrapper:hover .member-icon{
+  bottom: 0;
+  opacity: 1;
+}
+.animate{
+  transition: all 0.3s ease-in-out;
 }
